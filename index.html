@@ -323,8 +323,6 @@
   <nav>
     <button class="nav-btn active" id="nav-table" onclick="goTable()">📋 Nalozi</button>
     <button class="nav-btn"        id="nav-form"  onclick="goNew()">＋ Novi nalog</button>
-    <span id="sync-status" style="font-size:12px;font-weight:600;color:#94a3b8;white-space:nowrap">⏳ Učitavanje...</span>
-    <button onclick="openTokenSettings()" title="GitHub postavke" style="width:42px;height:42px;border-radius:50%;border:1.5px solid var(--border);background:var(--bg2);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text);flex-shrink:0;" onmouseover="this.style.borderColor='#f97316'" onmouseout="this.style.borderColor='var(--border)'">⚙️</button>
     <button id="theme-btn" onclick="toggleTheme()" title="Promijeni temu">🌙</button>
   </nav>
 </div>
@@ -457,40 +455,6 @@
   </div>
 </div>
 
-<!-- TOKEN SETUP -->
-<div class="overlay open" id="modal-token">
-  <div class="modal" onclick="event.stopPropagation()" style="max-width:480px">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-      <div style="width:42px;height:42px;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🔑</div>
-      <div>
-        <div style="font-size:18px;font-weight:800">GitHub konfiguracija</div>
-        <div style="font-size:13px;color:var(--text3);margin-top:2px">Potrebno jednom po uređaju</div>
-      </div>
-    </div>
-    <p style="color:var(--text2);font-size:15px;line-height:1.6;margin-bottom:20px">
-      Upiši svoj <strong>GitHub Personal Access Token</strong> kako bi se nalozi automatski spremali u bazu.
-      Token se sprema samo lokalno u ovaj browser.
-    </p>
-    <div style="margin-bottom:16px">
-      <label class="field-label">Personal Access Token</label>
-      <input id="token-input" type="password" placeholder="ghp_..." style="font-family:monospace;font-size:14px" />
-    </div>
-    <div style="margin-bottom:20px;padding:12px;background:var(--bg3);border-radius:9px;border:1px solid var(--border)">
-      <div style="font-size:13px;color:var(--text3);line-height:1.6">
-        📌 Kako generirati token:<br>
-        1. Idi na <strong>github.com → Settings → Developer settings</strong><br>
-        2. Klikni <strong>Personal access tokens → Tokens (classic)</strong><br>
-        3. <strong>Generate new token (classic)</strong><br>
-        4. Označi ✅ <strong>repo</strong> → Generate → Kopiraj token
-      </div>
-    </div>
-    <div class="flex-end">
-      <button class="btn btn-ghost" onclick="skipToken()">Preskoči (samo lokalno)</button>
-      <button class="btn btn-primary" onclick="saveToken()">💾 Spremi token</button>
-    </div>
-  </div>
-</div>
-
 <div id="toast"></div>
 
 <script>
@@ -522,130 +486,16 @@ function toggleTheme() {
   setTheme(cur === "dark" ? "light" : "dark");
 }
 
-// ── GITHUB CONFIG ─────────────────────────────────────────────────────────
-const GH_USER = "tvlahov06";
-const GH_REPO = "Milsped_nalog";
-const GH_FILE = "database.json";
-const GH_API  = `https://api.github.com/repos/${GH_USER}/${GH_REPO}/contents/${GH_FILE}`;
-
-function getToken() { return localStorage.getItem("milsped_gh_token") || ""; }
-
-let ghFileSha = null;
-
-// ── TOKEN MODAL ───────────────────────────────────────────────────────────
-function saveToken() {
-  const t = document.getElementById("token-input").value.trim();
-  if (!t) { showToast("Upiši token!", "error"); return; }
-  localStorage.setItem("milsped_gh_token", t);
-  document.getElementById("modal-token").classList.remove("open");
-  loadFromGitHub();
-}
-
-function skipToken() {
-  document.getElementById("modal-token").classList.remove("open");
-  try { nalozi = JSON.parse(localStorage.getItem("milsped_nalozi") || "[]"); } catch { nalozi = []; }
-  showSyncStatus("⚠️ Lokalni način – bez GitHub sync", "warn");
-  renderStats(); renderTable();
-}
-
-function openTokenSettings() {
-  const existing = getToken();
-  if (existing) document.getElementById("token-input").value = existing;
-  document.getElementById("modal-token").classList.add("open");
-}
-
-// ── GITHUB – UČITAJ BAZU ──────────────────────────────────────────────────
-async function loadFromGitHub() {
-  const token = getToken();
-  if (!token) {
-    try { nalozi = JSON.parse(localStorage.getItem("milsped_nalozi") || "[]"); } catch { nalozi = []; }
-    showSyncStatus("⚠️ Lokalni način – bez GitHub sync", "warn");
-    renderStats(); renderTable();
-    return;
-  }
-  showSyncStatus("⏳ Učitavanje baze...", "info");
-  try {
-    const res = await fetch(GH_API, {
-      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
-    });
-    if (res.status === 404) {
-      nalozi = [];
-      ghFileSha = null;
-      showSyncStatus("✅ Baza prazna – spreman za unos", "ok");
-    } else if (res.ok) {
-      const json = await res.json();
-      ghFileSha = json.sha;
-      nalozi = JSON.parse(atob(json.content.replace(/\n/g, "")));
-      showSyncStatus("✅ Baza učitana (" + nalozi.length + " naloga)", "ok");
-    } else {
-      throw new Error("HTTP " + res.status);
-    }
-  } catch (e) {
-    try { nalozi = JSON.parse(localStorage.getItem("milsped_nalozi") || "[]"); } catch { nalozi = []; }
-    showSyncStatus("⚠️ Offline – podaci iz lokalnog cachea", "warn");
-  }
-  renderStats();
-  renderTable();
-}
-
-// ── GITHUB – SPREMI BAZU ──────────────────────────────────────────────────
-async function saveToGitHub() {
-  const token = getToken();
-  if (!token) {
-    localStorage.setItem("milsped_nalozi", JSON.stringify(nalozi));
-    showSyncStatus("⚠️ Lokalni način – bez GitHub sync", "warn");
-    return;
-  }
-  showSyncStatus("⏳ Sprema se...", "info");
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(nalozi, null, 2))));
-  const body = {
-    message: `Update: ${new Date().toLocaleString("hr-HR")}`,
-    content,
-    ...(ghFileSha ? { sha: ghFileSha } : {})
-  };
-  try {
-    const res = await fetch(GH_API, {
-      method: "PUT",
-      headers: {
-        Authorization: `token ${token}`,
-        Accept: "application/vnd.github.v3+json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(body)
-    });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const json = await res.json();
-    ghFileSha = json.content.sha;
-    localStorage.setItem("milsped_nalozi", JSON.stringify(nalozi));
-    showSyncStatus("✅ Spremljeno na GitHub", "ok");
-  } catch (e) {
-    localStorage.setItem("milsped_nalozi", JSON.stringify(nalozi));
-    showSyncStatus("⚠️ Greška – lokalno pohranjeno", "warn");
-    showToast("⚠️ GitHub nedostupan – lokalno pohranjeno", "error");
-  }
-}
-
-function persist() {
-  saveToGitHub();
-}
-
-// ── SYNC STATUS INDIKATOR ─────────────────────────────────────────────────
-function showSyncStatus(msg, type) {
-  const el = document.getElementById("sync-status");
-  if (!el) return;
-  el.textContent = msg;
-  el.style.color = type === "ok" ? "#10b981" : type === "warn" ? "#f59e0b" : "#94a3b8";
-}
-
 // ── INIT ──────────────────────────────────────────────────────────────────
 (function init() {
-  if (getToken()) {
-    // Token već postoji – sakrij modal i učitaj odmah
-    document.getElementById("modal-token").classList.remove("open");
-    loadFromGitHub();
-  }
-  // Ako nema tokena, modal ostaje otvoren (već je open u HTML-u)
+  try { nalozi = JSON.parse(localStorage.getItem("milsped_nalozi") || "[]"); } catch { nalozi = []; }
+  renderStats();
+  renderTable();
 })();
+
+function persist() {
+  localStorage.setItem("milsped_nalozi", JSON.stringify(nalozi));
+}
 
 // ── NAV ───────────────────────────────────────────────────────────────────
 function goTable() {
