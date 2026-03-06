@@ -340,7 +340,6 @@
       <button class="btn btn-success"   onclick="exportXLSX(null)">📊 Excel</button>
       <button class="btn btn-secondary" onclick="exportJSON()">💾 JSON</button>
       <button class="btn btn-ghost"     onclick="document.getElementById('file-import').click()">📥 Uvoz</button>
-      <button class="btn btn-primary"   id="btn-save-file" onclick="saveToFile()" title="Spremi podatke direktno u index.html">💾 Spremi u datoteku</button>
       <input type="file" id="file-import" accept=".json" style="display:none" onchange="importJSON(event)" />
     </div>
     <div class="card">
@@ -636,7 +635,7 @@ async function saveToGitHub() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const json = await res.json();
     ghFileSha = json.content.sha;
-    setSyncStatus("✅ Spremljeno na GitHub", "ok");
+    setSyncStatus("✅ Spremljeno", "ok");
   } catch(e) {
     setSyncStatus("⚠️ Greška – lokalno ok", "warn");
   }
