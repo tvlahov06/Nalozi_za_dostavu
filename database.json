@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Ivana Delic",
+    "adresa": "Pujanke 43",
+    "postanskiBroj": "21000",
+    "mjesto": "Split",
+    "kontaktBroj": "0971452451",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "20",
+    "fakturnaVrijednost": "499",
+    "externiDokument": "5465434",
+    "nazivArtikla": "Hladnjakl Hisense",
+    "iznosOtkupnine": "499",
+    "otkupnina": true,
+    "id": "mmf06hrl0kgjvhnckjx",
+    "kreiranDatum": "2026-03-06T14:41:57.105Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Tomislav Vlahovic",
     "adresa": "Trenkova 84",
     "postanskiBroj": "21000",
