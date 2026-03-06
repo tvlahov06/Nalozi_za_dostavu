@@ -1,25 +1,5 @@
 [
   {
-    "nazivKupca": "Ivana Delic",
-    "adresa": "Pujanke 43",
-    "postanskiBroj": "21000",
-    "mjesto": "Split",
-    "kontaktBroj": "0971452451",
-    "poslovnica": "BigBang Split CCO",
-    "koleta": "1",
-    "brutoTezina": "50",
-    "fakturnaVrijednost": "499",
-    "externiDokument": "6561435",
-    "nazivArtikla": "Hladnjak gorenje bla",
-    "iznosOtkupnine": "499",
-    "otkupnina": true,
-    "id": "mmf0k2odm3r6bqkdye8",
-    "kreiranDatum": "2026-03-06T14:52:30.733Z",
-    "izmjenjenDatum": null,
-    "preuzeto": true,
-    "preuzetoDatum": "2026-03-06T14:55:32.948Z"
-  },
-  {
     "nazivKupca": "Tomislav Vlahovic",
     "adresa": "Trenkova 84",
     "postanskiBroj": "21000",
