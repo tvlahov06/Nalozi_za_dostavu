@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "nazivKupca": "Tomislav Vlahović",
+    "adresa": "Trenkova 84",
+    "postanskiBroj": "21000",
+    "mjesto": "Split",
+    "kontaktBroj": "0915763877",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "22",
+    "fakturnaVrijednost": "199",
+    "externiDokument": "4546656",
+    "nazivArtikla": "Perilica rublja Hisense",
+    "iznosOtkupnine": "199",
+    "otkupnina": true,
+    "id": "mmeru403px0ocgwelfk",
+    "kreiranDatum": "2026-03-06T10:48:22.467Z",
+    "izmjenjenDatum": null
+  }
+]
