@@ -338,6 +338,7 @@
       <input id="search-input" style="max-width:280px" placeholder="🔍 Pretraži kupca, mjesto, ID..." oninput="renderTable()" />
       <button class="btn btn-primary"   onclick="goNew()">＋ Novi nalog</button>
       <button class="btn btn-success"   onclick="exportXLSX(null)">📊 Excel</button>
+      <button class="btn btn-success"   id="btn-export-sel" onclick="exportSelected()" style="display:none;background:linear-gradient(135deg,#16a34a,#15803d)">📊 Excel označenih (<span id="sel-count">0</span>)</button>
       <button class="btn btn-secondary" onclick="exportJSON()">💾 JSON</button>
       <button class="btn btn-ghost"     onclick="document.getElementById('file-import').click()">📥 Uvoz</button>
       <input type="file" id="file-import" accept=".json" style="display:none" onchange="importJSON(event)" />
@@ -347,10 +348,13 @@
         <table>
           <thead>
             <tr>
+              <th style="width:36px;padding:10px 8px;text-align:center">
+                <input type="checkbox" id="check-all" onchange="toggleCheckAll()" style="width:17px;height:17px;accent-color:#f97316;cursor:pointer" />
+              </th>
               <th onclick="toggleSort('externiDokument')">Ext. ID <span id="si-externiDokument"></span></th>
               <th onclick="toggleSort('nazivKupca')">Kupac <span id="si-nazivKupca"></span></th>
               <th onclick="toggleSort('mjesto')">Mjesto <span id="si-mjesto"></span></th>
-              <th onclick="toggleSort('koleta')" class="hide-mobile">Koleta <span id="si-koleta"></span></th>
+              <th onclick="toggleSort('koleta')" class="hide-mobile">Kol. <span id="si-koleta"></span></th>
               <th onclick="toggleSort('brutoTezina')" class="hide-mobile">Težina <span id="si-brutoTezina"></span></th>
               <th onclick="toggleSort('fakturnaVrijednost')" class="hide-mobile">Fakt. vr. <span id="si-fakturnaVrijednost"></span></th>
               <th onclick="toggleSort('otkupnina')">Otkupnina <span id="si-otkupnina"></span></th>
@@ -804,12 +808,15 @@ function renderTable() {
 
   const tbody = document.getElementById("table-body");
   if (!rows.length) {
-    tbody.innerHTML = `<tr><td colspan="11" class="empty-msg">${nalozi.length === 0
+    tbody.innerHTML = `<tr><td colspan="12" class="empty-msg">${nalozi.length === 0
       ? 'Nema unesenih naloga. Kliknite "＋ Novi nalog" za početak.'
       : 'Nema rezultata za zadanu pretragu.'}</td></tr>`;
   } else {
     tbody.innerHTML = rows.map(n => `
       <tr>
+        <td style="text-align:center;padding:10px 8px">
+          <input type="checkbox" class="row-check" data-id="${n.id}" onchange="updateSelection()" style="width:17px;height:17px;accent-color:#f97316;cursor:pointer" />
+        </td>
         <td><span class="mono">${esc(n.externiDokument)||"-"}</span></td>
         <td><strong style="font-size:15px">${esc(n.nazivKupca)}</strong><div class="sub-text">${esc(n.adresa)}</div></td>
         <td>${esc(n.mjesto)}${n.postanskiBroj?` <span class="text-muted" style="font-size:12px">(${esc(n.postanskiBroj)})</span>`:""}</td>
@@ -844,6 +851,37 @@ function toggleSort(col) {
   sortDir = sortCol === col ? (sortDir === "asc" ? "desc" : "asc") : "asc";
   sortCol = col;
   renderTable();
+}
+
+// ── CHECKBOX SELEKCIJA ────────────────────────────────────────────────────
+function toggleCheckAll() {
+  const checked = document.getElementById("check-all").checked;
+  document.querySelectorAll(".row-check").forEach(cb => cb.checked = checked);
+  updateSelection();
+}
+
+function updateSelection() {
+  const selected = document.querySelectorAll(".row-check:checked");
+  const count = selected.length;
+  const btnSel = document.getElementById("btn-export-sel");
+  const btnAll = document.querySelector('.btn-success[onclick="exportXLSX(null)"]');
+  document.getElementById("sel-count").textContent = count;
+  btnSel.style.display = count > 0 ? "" : "none";
+  if (btnAll) btnAll.style.display = count > 0 ? "none" : "";
+  // Sync "označi sve" checkbox
+  const all = document.querySelectorAll(".row-check");
+  const chkAll = document.getElementById("check-all");
+  if (chkAll) chkAll.checked = all.length > 0 && selected.length === all.length;
+}
+
+function exportSelected() {
+  const ids = [...document.querySelectorAll(".row-check:checked")].map(cb => cb.dataset.id);
+  if (!ids.length) return;
+  exportXLSX(ids);
+  // Odznači sve nakon exporta
+  document.querySelectorAll(".row-check").forEach(cb => cb.checked = false);
+  document.getElementById("check-all").checked = false;
+  updateSelection();
 }
 
 // ── PREUZETO TOGGLE ───────────────────────────────────────────────────────
