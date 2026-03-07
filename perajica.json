@@ -1,6 +1,6 @@
 [
   {
-    "imeIPrezime": "Neven Vrgoč",
+    "imeIPrezime": "Neven VrgoÄ",
     "adresa": "Vukovarska 207",
     "postanskiBroj": "21000",
     "mjesto": "Split",
@@ -25,11 +25,11 @@
     "id": "mmgxa8xv1p6s7lp2kow",
     "kreiranDatum": "2026-03-07T22:56:25.795Z",
     "izmjenjenDatum": null,
-    "preuzeto": true,
-    "preuzetoDatum": "2026-03-07T22:56:58.986Z"
+    "preuzeto": false,
+    "preuzetoDatum": null
   },
   {
-    "imeIPrezime": "Tomislav Vlahović",
+    "imeIPrezime": "Tomislav VlahoviÄ",
     "adresa": "Trenkova 84",
     "postanskiBroj": "21000",
     "mjesto": "Split",
