@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Neven Vrgoč",
+    "adresa": "Vukovarska 207",
+    "postanskiBroj": "21000",
+    "mjesto": "Split",
+    "kontaktBroj": "0971452451",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "20",
+    "fakturnaVrijednost": "599",
+    "externiDokument": "5465434",
+    "nazivArtikla": "perilica rublja",
+    "iznosOtkupnine": "599",
+    "otkupnina": true,
+    "id": "mmge0ufkashlor3v93k",
+    "kreiranDatum": "2026-03-07T13:57:14.384Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Tomislav Vlahovic",
     "adresa": "Trenkova 84",
     "postanskiBroj": "21000",
