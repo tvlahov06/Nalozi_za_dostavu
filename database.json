@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Neven Vrgoč",
+    "adresa": "Vukovarska 207",
+    "postanskiBroj": "21000",
+    "mjesto": "Split",
+    "kontaktBroj": "0952412512",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "15",
+    "fakturnaVrijednost": "200",
+    "externiDokument": "5454354",
+    "nazivArtikla": "hladnjal",
+    "iznosOtkupnine": "200",
+    "otkupnina": true,
+    "id": "mmgdwf0q8zsvh2gz2j6",
+    "kreiranDatum": "2026-03-07T13:53:47.786Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Tomislav Vlahovic",
     "adresa": "Trenkova 84",
     "postanskiBroj": "21000",
