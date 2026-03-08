@@ -566,7 +566,7 @@ async function loadFromGitHub() {
     } else if (res.ok) {
       const json = await res.json();
       ghFileSha = json.sha;
-      nalozi = JSON.parse(atob(json.content.replace(/\n/g, "")));
+      nalozi = JSON.parse(decodeURIComponent(escape(atob(json.content.replace(/\n/g, "")))));
       setSyncStatus("✅ Učitano (" + nalozi.length + ")", "ok");
     } else {
       throw new Error("HTTP " + res.status);
