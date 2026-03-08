@@ -279,7 +279,7 @@
 <body>
 
 <!-- LANDING PAGE -->
-<div id="landing" style="display:none;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;gap:0;background:var(--bg)">
+<div id="landing" style="display:none;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;gap:0;background:var(--bg);position:relative">
   <!-- ── LANDING CSS (vanjski fajl) ── -->
   <div class="landing-wrap">
     <div class="landing-logo">
@@ -287,6 +287,7 @@
       <div class="landing-title">Nalozi za dostavu</div>
       <div class="landing-subtitle">Odaberi špediciju za nastavak</div>
     </div>
+    <button id="landing-theme-btn" onclick="toggleTheme()" title="Promijeni temu" style="position:absolute;top:20px;right:24px;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--border);background:var(--bg2);cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text);">🌙</button>
     <div class="landing-cards">
       <!-- IP PERAJICA -->
       <div class="landing-card" style="--card-accent:#3b82f6" onclick="odaberiSpediciju('perajica')">
@@ -316,7 +317,7 @@
     </div>
   </div>
   <nav>
-    <button class="nav-btn" onclick="promijeniSpediciju()" title="Promijeni špediciju">🔄 Špedicija</button>
+    <button class="nav-btn" onclick="promijeniSpediciju()" title="Odabir prijevoznika">🔄 Odabir prijevoznika</button>
     <button class="nav-btn active" id="nav-table" onclick="goTable()">📋 Nalozi</button>
     <button class="nav-btn"        id="nav-form"  onclick="goNew()">＋ Novi nalog</button>
     <span id="sync-status" style="font-size:12px;font-weight:600;color:#94a3b8;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis"></span>
@@ -472,6 +473,8 @@ let toastTimer;
 function setTheme(t) {
   document.documentElement.setAttribute("data-theme", t);
   document.getElementById("theme-btn").textContent = t === "dark" ? "🌙" : "☀️";
+  const lb = document.getElementById("landing-theme-btn");
+  if (lb) lb.textContent = t === "dark" ? "🌙" : "☀️";
   localStorage.setItem("milsped_theme", t);
 }
 
