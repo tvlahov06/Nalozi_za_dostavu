@@ -1,0 +1,138 @@
+/* ══════════════════════════════════════════════════════
+   LANDING PAGE – Nalozi za dostavu
+   Odabir špedicije
+   ══════════════════════════════════════════════════════ */
+
+/* ── Glavni kontejner ── */
+.landing-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 20px;
+}
+
+/* ── Logo sekcija (ikona + naslov + podnaslov) ── */
+.landing-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Kvadratna ikona s logom aplikacije (slovo N) */
+.landing-logo-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: 0 8px 32px rgba(191, 70, 70, .35);
+}
+
+/* Naslov "Nalozi za dostavu" */
+.landing-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+/* Podnaslov "Odaberi špediciju za nastavak" */
+.landing-subtitle {
+  font-size: 15px;
+  color: var(--text3);
+  margin-top: -12px;
+}
+
+/* ── Red s karticama ── */
+.landing-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Kartica špedicije ── */
+.landing-card {
+  width: 240px;
+  border-radius: 18px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  border: 2px solid var(--border);
+  background: var(--bg2);
+  transition: all .25s;
+  box-shadow: var(--card-shadow);
+}
+
+/* Hover efekt – kartica se podiže */
+.landing-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-accent);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .25);
+}
+
+/* ── Logo ikona unutar kartice (slika špedicije) ── */
+.landing-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform .25s;
+}
+
+/* Hover – ikona se malo povećava */
+.landing-card:hover .landing-card-icon {
+  transform: scale(1.08);
+}
+
+/* Naziv špedicije */
+.landing-card-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Kratki opis */
+.landing-card-desc {
+  font-size: 13px;
+  color: var(--text3);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Gumb "Otvori →" */
+.landing-card-btn {
+  margin-top: 4px;
+  padding: 10px 28px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  width: 100%;
+}
+
+.landing-card-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
