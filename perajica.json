@@ -132,7 +132,9 @@
     "napomene": "Zvati kupca pola sata prije",
     "id": "mnys23r6h6sy8w3e29",
     "kreiranDatum": "2026-04-14T15:29:41.250Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-04-20T17:29:32.233Z"
   },
   {
     "imeIPrezime": "IVANA JUKIĆ",
@@ -159,7 +161,9 @@
     "napomene": "molimo nazvati prije dostave.",
     "id": "mnxia59icg5t0sb99wu",
     "kreiranDatum": "2026-04-13T18:08:14.118Z",
-    "izmjenjenDatum": "2026-04-13T18:08:57.701Z"
+    "izmjenjenDatum": "2026-04-13T18:08:57.701Z",
+    "preuzeto": true,
+    "preuzetoDatum": "2026-04-20T17:29:31.672Z"
   },
   {
     "imeIPrezime": "NIVES DUVNJAK",
