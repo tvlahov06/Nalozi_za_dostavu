@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Goran Horvat",
+    "adresa": "Moslavačka ulica 119",
+    "postanskiBroj": "44317",
+    "mjesto": "Popovača",
+    "kontaktBroj": "0976486942",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "16.3",
+    "fakturnaVrijednost": "324",
+    "externiDokument": "5306139",
+    "nazivArtikla": "TV HISENSE 55E77Q, 139.7cm (55\"), QLED, 4K UHD Smart TV, VIDAA OS",
+    "iznosOtkupnine": "324.99",
+    "otkupnina": true,
+    "id": "moh7u6h2wrxf0lyqyd",
+    "kreiranDatum": "2026-04-27T13:11:16.550Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "MR Servis",
     "adresa": "Dugoselska 5",
     "postanskiBroj": "10372",
