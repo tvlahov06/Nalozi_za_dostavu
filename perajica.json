@@ -27,8 +27,8 @@
     "izmjenjenDatum": null
   },
   {
-    "imeIPrezime": "Sergej",
-    "adresa": "Bočkarjov",
+    "imeIPrezime": "Sergej Bočkarjov",
+    "adresa": "Trogir",
     "postanskiBroj": "21220",
     "mjesto": "Trogir ( Čiovo ) kod mosta",
     "kontaktBroj": "",
@@ -40,7 +40,7 @@
     "gabaritnaRoba": "DA",
     "nosenjaNaKat": "DA",
     "kojKat": "1",
-    "dostavaVanSplita": "NE",
+    "dostavaVanSplita": "DA",
     "b2bDostava": "NE",
     "brojPaleta": "1",
     "instalacija": "NE",
@@ -51,7 +51,7 @@
     "napomene": "Danas 30.4. oko 18:00",
     "id": "molhu6kbyg2ozjlevx",
     "kreiranDatum": "2026-04-30T13:02:17.531Z",
-    "izmjenjenDatum": null,
+    "izmjenjenDatum": "2026-05-02T13:48:23.141Z",
     "preuzeto": true,
     "preuzetoDatum": "2026-05-02T13:47:55.536Z"
   },
