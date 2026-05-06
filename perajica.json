@@ -296,7 +296,9 @@
     "napomene": "Ima lift",
     "id": "molcks3h0g143eo5panu",
     "kreiranDatum": "2026-04-30T10:35:00.797Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-06T09:03:23.234Z"
   },
   {
     "imeIPrezime": "Josip Brakus",
