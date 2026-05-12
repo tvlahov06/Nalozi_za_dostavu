@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Arijana Oroz",
+    "adresa": "Prilaz Baruna Filipovića 23B",
+    "postanskiBroj": "10000",
+    "mjesto": "Zagreb",
+    "kontaktBroj": "098471446",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "41.570",
+    "fakturnaVrijednost": "489",
+    "externiDokument": "5379750",
+    "nazivArtikla": "Perilica posuđa ugradbena 60 cm Whirlpool WI 7020 P",
+    "iznosOtkupnine": "",
+    "otkupnina": false,
+    "id": "mp2lmfqkcde62ss8uzv",
+    "kreiranDatum": "2026-05-12T12:20:19.628Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Goran Horvat",
     "adresa": "Moslavačka ulica 119",
     "postanskiBroj": "44317",
