@@ -24,7 +24,9 @@
     "napomene": "Hladnjak plaćem po računu 11605-03M-1 a dostava naknadno",
     "id": "mp2mymde28h1fly6pf7",
     "kreiranDatum": "2026-05-12T12:57:47.714Z",
-    "izmjenjenDatum": "2026-05-12T15:50:38.736Z"
+    "izmjenjenDatum": "2026-05-12T15:50:38.736Z",
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-12T15:56:23.494Z"
   },
   {
     "imeIPrezime": "Nela Kavelj",
@@ -302,7 +304,9 @@
     "napomene": "",
     "id": "motrok1qxjpzr0m2xm",
     "kreiranDatum": "2026-05-06T08:00:00.638Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-12T15:56:19.385Z"
   },
   {
     "imeIPrezime": "Marin Simunić",
