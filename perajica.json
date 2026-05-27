@@ -377,7 +377,9 @@
     "napomene": "Prikup neispravnog tva iz servisa i skladištenje u CCO SPLIT",
     "id": "mp5fgmewncmd3gc0v9",
     "kreiranDatum": "2026-05-14T11:51:09.176Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:21.139Z"
   },
   {
     "imeIPrezime": "STIPE MALADA",
@@ -404,7 +406,9 @@
     "napomene": "",
     "id": "mp5e5u5ud6aj641f8u",
     "kreiranDatum": "2026-05-14T11:14:46.386Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:20.057Z"
   },
   {
     "imeIPrezime": "Ivana Trlin",
@@ -431,7 +435,9 @@
     "napomene": "",
     "id": "mp3x0x4479y6unc5c4v",
     "kreiranDatum": "2026-05-13T10:27:17.284Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:19.626Z"
   },
   {
     "imeIPrezime": "Zdravka Unković",
