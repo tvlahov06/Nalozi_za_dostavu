@@ -458,7 +458,9 @@
     "napomene": "",
     "id": "mp3uw39bk2jm82pdx3p",
     "kreiranDatum": "2026-05-13T09:27:32.735Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:19.088Z"
   },
   {
     "imeIPrezime": "Bruno Delić",
@@ -485,7 +487,9 @@
     "napomene": "",
     "id": "mp2vibow9h63tnhhsuf",
     "kreiranDatum": "2026-05-12T16:57:03.920Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:18.334Z"
   },
   {
     "imeIPrezime": "Ani Jelaska",
@@ -513,8 +517,8 @@
     "id": "mp2mymde28h1fly6pf7",
     "kreiranDatum": "2026-05-12T12:57:47.714Z",
     "izmjenjenDatum": "2026-05-12T15:50:38.736Z",
-    "preuzeto": false,
-    "preuzetoDatum": null
+    "preuzeto": true,
+    "preuzetoDatum": "2026-05-27T12:21:17.552Z"
   },
   {
     "imeIPrezime": "Nela Kavelj",
