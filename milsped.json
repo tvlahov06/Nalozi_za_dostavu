@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Marina Bartulović",
+    "adresa": "Virska ulica 1a",
+    "postanskiBroj": "10000",
+    "mjesto": "Zagreb",
+    "kontaktBroj": "0989044143",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "78",
+    "fakturnaVrijednost": "1049.99",
+    "externiDokument": "5555502",
+    "nazivArtikla": "Perilica rublja Haier HW100-BD14397U1S",
+    "iznosOtkupnine": "",
+    "otkupnina": false,
+    "id": "mqewaclky6dxvzn64",
+    "kreiranDatum": "2026-06-15T07:31:47.912Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Arijana Oroz",
     "adresa": "Prilaz Baruna Filipovića 23B",
     "postanskiBroj": "10000",
