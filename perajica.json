@@ -672,7 +672,9 @@
     "napomene": "MOLIMO SVAKAKO NAZVATI PRIJE DOSTAVE",
     "id": "mq25o0dh0nlpc3shx4c",
     "kreiranDatum": "2026-06-06T09:33:21.509Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-06-16T07:45:00.717Z"
   },
   {
     "imeIPrezime": "Ines Jovanović",
@@ -699,7 +701,9 @@
     "napomene": "",
     "id": "mq0ybgnbuag0vfhfz6",
     "kreiranDatum": "2026-06-05T13:19:52.583Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-06-16T07:44:59.346Z"
   },
   {
     "imeIPrezime": "Milijana Županović",
@@ -726,7 +730,9 @@
     "napomene": "Nazvat prije dostave.\n3.kat",
     "id": "mq0xat1awgj7agzv64c",
     "kreiranDatum": "2026-06-05T12:51:22.366Z",
-    "izmjenjenDatum": "2026-06-05T12:51:52.942Z"
+    "izmjenjenDatum": "2026-06-05T12:51:52.942Z",
+    "preuzeto": true,
+    "preuzetoDatum": "2026-06-16T07:44:59.075Z"
   },
   {
     "imeIPrezime": "Josip Giljanović",
@@ -753,7 +759,9 @@
     "napomene": "Nazvati prije dostave",
     "id": "mq0uiztcf4muuqxf71u",
     "kreiranDatum": "2026-06-05T11:33:45.552Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-06-16T07:44:58.791Z"
   },
   {
     "imeIPrezime": "Josipa Dulčić",
