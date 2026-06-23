@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Nada Benko",
+    "adresa": "Žimider ulica 11",
+    "postanskiBroj": "51260",
+    "mjesto": "Crikvenica",
+    "kontaktBroj": "098452775",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "24",
+    "fakturnaVrijednost": "485.09",
+    "externiDokument": "2708849",
+    "nazivArtikla": "TV LG 55QNED86A3A 139.7cm (55\"), QNED, 4K UHD Smart TV, webOS",
+    "iznosOtkupnine": "",
+    "otkupnina": false,
+    "id": "mqqpflmnpjnrmv0rzbk",
+    "kreiranDatum": "2026-06-23T13:53:09.695Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Marina Bartulović",
     "adresa": "Virska ulica 1a",
     "postanskiBroj": "10000",
