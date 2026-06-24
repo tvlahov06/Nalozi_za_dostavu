@@ -1,5 +1,23 @@
 [
   {
+    "nazivKupca": "Siniša Legčević",
+    "adresa": "Turistička 14",
+    "postanskiBroj": "21217",
+    "mjesto": "Kaštel Štafilić",
+    "kontaktBroj": "098220407",
+    "poslovnica": "BigBang Split CCO",
+    "koleta": "1",
+    "brutoTezina": "40",
+    "fakturnaVrijednost": "",
+    "externiDokument": "",
+    "nazivArtikla": "Perilica posuđa Whirpool WIC 3C33 PFE  i PRIKUP iste neispravne",
+    "iznosOtkupnine": "",
+    "otkupnina": false,
+    "id": "mqrsw6wgr2jcciyt1p",
+    "kreiranDatum": "2026-06-24T08:17:48.784Z",
+    "izmjenjenDatum": null
+  },
+  {
     "nazivKupca": "Nada Benko",
     "adresa": "Žimider ulica 11",
     "postanskiBroj": "51260",
