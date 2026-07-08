@@ -672,7 +672,9 @@
     "napomene": "NAZVATI PRIJE DOSTAVE",
     "id": "mqs8ui2uk1dbwvqt0t",
     "kreiranDatum": "2026-06-24T15:44:23.814Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-07-08T13:49:08.202Z"
   },
   {
     "imeIPrezime": "Matija Samma",
@@ -699,7 +701,9 @@
     "napomene": "",
     "id": "mqrtb1c3o2080r6v0bb",
     "kreiranDatum": "2026-06-24T08:29:21.411Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-07-08T13:49:07.840Z"
   },
   {
     "imeIPrezime": "Zrinko Prgomet",
