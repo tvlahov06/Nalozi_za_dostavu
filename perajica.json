@@ -375,7 +375,9 @@
     "napomene": "Kupac Želi dostavu u ponediljak,nazvati ga za dogovor.",
     "id": "mr1u4j4pgjdpgweipoi",
     "kreiranDatum": "2026-07-01T08:49:59.257Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-07-08T13:49:15.254Z"
   },
   {
     "imeIPrezime": "DAMIR ŽUVELA",
@@ -402,7 +404,9 @@
     "napomene": "OBAVEZNO NAZVATI PRIJE DOSTAVE RADI DOGOVORA",
     "id": "mqz0fk7ujt6mvm38o3d",
     "kreiranDatum": "2026-06-29T09:23:13.050Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-07-08T13:49:14.832Z"
   },
   {
     "imeIPrezime": "Sandbera Jovanović",
@@ -429,7 +433,9 @@
     "napomene": "",
     "id": "mqz0166yx2evb8iau6e",
     "kreiranDatum": "2026-06-29T09:12:01.690Z",
-    "izmjenjenDatum": null
+    "izmjenjenDatum": null,
+    "preuzeto": true,
+    "preuzetoDatum": "2026-07-08T13:49:14.334Z"
   },
   {
     "imeIPrezime": "Luce Ćuk",
